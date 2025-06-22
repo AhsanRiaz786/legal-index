@@ -1,9 +1,26 @@
 import type React from "react"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
+import { Inter, Playfair_Display, Poppins } from "next/font/google"
 import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+const inter = Inter({ 
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap"
+})
+
+const playfair = Playfair_Display({ 
+  subsets: ["latin"],
+  variable: "--font-playfair",
+  display: "swap"
+})
+
+const poppins = Poppins({ 
+  subsets: ["latin"],
+  weight: ["300", "400", "500", "600", "700"],
+  variable: "--font-poppins",
+  display: "swap"
+})
 
 export const metadata: Metadata = {
   title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
@@ -65,7 +82,7 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.className} bg-gray-50 text-slate-900`}>{children}</body>
+      <body className={`${inter.variable} ${playfair.variable} ${poppins.variable} font-poppins bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 antialiased`}>{children}</body>
     </html>
   )
 }
