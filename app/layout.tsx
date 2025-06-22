@@ -6,23 +6,23 @@ import "./globals.css"
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "The Legal Index | Attorney Database by Practice Area",
+  title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
   description:
-    "The definitive database of 300K+ U.S. attorneys. Move beyond generic lists and target by specific practice areas. See why top agencies and legal tech companies choose The Legal Index. Download a sample.",
-  keywords: "attorney database, lawyer leads, legal marketing, practice area targeting, attorney contact information",
+    "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Email lists, phone numbers, practice areas by state. Perfect for legal marketing agencies, CRM companies & legal tech startups. Download free sample.",
+  keywords: "buy attorney leads, lawyer contact database, attorney email list, US lawyer database, legal marketing leads, attorney phone numbers, lawyer leads for sale, attorney contact information by state, legal email database, attorney database for marketing",
   authors: [{ name: "The Legal Index" }],
   openGraph: {
-    title: "The Legal Index | Attorney Database by Practice Area",
+    title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
     description:
-      "The definitive database of 300K+ U.S. attorneys. Move beyond generic lists and target by specific practice areas.",
+      "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Perfect for legal marketing agencies & CRM companies.",
     type: "website",
     url: "https://attorneyleads.store",
   },
   twitter: {
     card: "summary_large_image",
-    title: "The Legal Index | Attorney Database by Practice Area",
+    title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
     description:
-      "The definitive database of 300K+ U.S. attorneys. Move beyond generic lists and target by specific practice areas.",
+      "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Perfect for legal marketing agencies & CRM companies.",
   },
   robots: {
     index: true,

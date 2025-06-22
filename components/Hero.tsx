@@ -15,11 +15,10 @@ export default function Hero() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center animate-fade-in">
           <h1 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-slate-900 mb-6 leading-tight">
-            Your Next Client is in Our Database.
+            Buy Premium Attorney Leads Database - 300K+ Verified US Lawyers
           </h1>
           <p className="text-xl lg:text-2xl text-slate-600 mb-10 max-w-4xl mx-auto leading-relaxed">
-            Tired of chasing dead-end leads? The Legal Index gives you direct access to over 300,000 U.S. attorneys,
-            with the power to filter by their specific practice area. Stop guessing. Start connecting.
+            Get direct access to the most comprehensive lawyer contact database with verified emails, phone numbers, and practice areas. Perfect for marketing agencies, CRM companies, and legal tech startups seeking quality attorney leads for sale.
           </p>
           <Button
             onClick={scrollToForm}

@@ -3,19 +3,24 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 export default function FAQ() {
   const faqs = [
     {
-      question: "Where is your data sourced from?",
+      question: "How much does your attorney leads database cost?",
       answer:
-        "Our data is compiled from multiple authoritative sources including state bar associations, court records, professional directories, and verified public databases. We maintain strict quality standards and regularly update our information to ensure accuracy and compliance.",
+        "Our attorney database pricing varies based on the number of contacts and filtering requirements. We offer competitive rates for marketing agencies, CRM companies, and legal tech startups. Contact us for custom pricing based on your specific attorney leads needs and volume requirements.",
     },
     {
-      question: "How do you ensure data accuracy?",
+      question: "Can I buy attorney leads by specific practice areas and states?",
       answer:
-        "We employ a multi-step verification process that includes automated validation, manual review, and regular data refreshes. Our team continuously monitors bounce rates, updates contact information, and removes invalid entries to maintain the highest data quality standards in the industry.",
+        "Yes! Our lawyer database allows filtering by practice areas (personal injury, corporate law, family law, etc.) and by state. You can purchase targeted attorney contact lists for specific jurisdictions and legal specialties to maximize your legal marketing campaign effectiveness.",
     },
     {
-      question: "Why a direct contact model instead of instant purchase?",
+      question: "Where is your attorney contact data sourced from?",
       answer:
-        "We are a premium service, not a bulk commodity. This ensures we can provide personalized support, understand your specific targeting needs, and maintain the integrity of our data for serious clients. Our white-glove approach guarantees you receive exactly the data you need for maximum ROI.",
+        "Our lawyer database is compiled from authoritative sources including state bar associations, court records, professional directories, and verified public databases. We maintain strict quality standards and regularly update our attorney contact information to ensure accuracy and compliance.",
+    },
+    {
+      question: "Why contact you directly instead of instant online purchase?",
+      answer:
+        "We provide personalized service to ensure you get exactly the attorney leads you need. Our team helps customize your lawyer database based on practice areas, geography, and firm size. This consultation approach ensures better ROI for your legal marketing campaigns and prevents waste on irrelevant contacts.",
     },
   ]
 
@@ -23,7 +28,7 @@ export default function FAQ() {
     <section className="py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Your Questions, Answered with Clarity.</h2>
+          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Attorney Leads Database - Frequently Asked Questions</h2>
         </div>
 
         <Accordion type="single" collapsible className="space-y-4">

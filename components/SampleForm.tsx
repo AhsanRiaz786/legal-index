@@ -52,10 +52,9 @@ export default function SampleForm() {
   return (
     <section id="sample-form" className="py-20 bg-white">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">The Proof Is in the Data.</h2>
+        <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Download Free Attorney Leads Sample</h2>
         <p className="text-xl text-slate-600 mb-10 leading-relaxed">
-          Words are cheap. Let our data speak for itself. Enter your email below to download a free, unfiltered sample
-          and see the quality firsthand.
+          Test our attorney database quality before you buy. Download a free sample of verified lawyer contacts including emails, phone numbers, and practice areas. See why marketing agencies trust our legal leads database.
         </p>
 
         <form onSubmit={handleSubmit} className="max-w-md mx-auto">

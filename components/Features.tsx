@@ -4,15 +4,15 @@ export default function Features() {
   const features = [
     {
       icon: Target,
-      title: "Target with Surgical Precision",
+      title: "Targeted Attorney Leads by Practice Area",
       description:
-        "Don't just market to lawyers. Connect with the right lawyers. Our 'Practice Area' filter lets you isolate personal injury attorneys from corporate litigators, ensuring your message is always relevant and never ignored.",
+        "Filter our lawyer database by specific practice areas. Target personal injury attorneys, corporate lawyers, or family law specialists. Our attorney contact lists ensure your legal marketing campaigns reach the right audience every time.",
     },
     {
       icon: Database,
-      title: "Data That Drives Decisions",
+      title: "Complete Lawyer Contact Information",
       description:
-        "Go beyond a name and email. Arm your sales team with a complete profile: direct phone numbers, law firm details, physical addresses, and bar numbers.",
+        "Each attorney lead includes verified email addresses, direct phone numbers, law firm details, physical addresses, and bar numbers. Get the full contact profile you need for successful legal marketing outreach.",
     },
     {
       icon: Shield,
@@ -33,7 +33,7 @@ export default function Features() {
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">
-            The Unfair Advantage Your Competitors Wish They Had.
+            Why Marketing Agencies Choose Our Attorney Email Database
           </h2>
         </div>
 
