@@ -45,7 +45,7 @@ export default function Contact() {
                 asChild
                 className="w-full premium-button text-white font-semibold rounded-xl border-0"
               >
-                <a href="https://wa.me/1234567890" target="_blank" rel="noopener noreferrer">
+                                 <a href="https://wa.me/923040949380" target="_blank" rel="noopener noreferrer">
                   Start WhatsApp Chat
                 </a>
               </Button>
@@ -67,7 +67,7 @@ export default function Contact() {
                 variant="outline"
                 className="w-full bg-white/80 backdrop-blur-sm border-slate-200 text-slate-700 hover:bg-white font-semibold rounded-xl"
               >
-                <a href="mailto:hello@attorneyleads.store">
+                                 <a href="mailto:ariaz.bscs23seecs@seecs.edu.pk">
                   Send Email
                 </a>
               </Button>
