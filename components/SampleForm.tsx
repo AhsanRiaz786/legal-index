@@ -6,7 +6,6 @@ import { useState } from "react"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Loader2 } from "lucide-react"
-import * as XLSX from 'xlsx'
 
 export default function SampleForm() {
   const [email, setEmail] = useState("")
@@ -53,59 +52,14 @@ export default function SampleForm() {
   }
 
   const handleDownload = () => {
-    // Generate 500 attorney leads data
-    const generateSampleData = () => {
-      const firstNames = ['John', 'Sarah', 'Michael', 'Emily', 'Robert', 'Jessica', 'David', 'Jennifer', 'James', 'Linda', 'Christopher', 'Patricia', 'Daniel', 'Barbara', 'Matthew', 'Susan', 'Anthony', 'Karen', 'Mark', 'Nancy', 'Donald', 'Lisa', 'Steven', 'Betty', 'Paul', 'Helen', 'Andrew', 'Sandra', 'Kenneth', 'Donna', 'Joshua', 'Carol', 'Kevin', 'Ruth', 'Brian', 'Sharon', 'George', 'Michelle', 'Edward', 'Laura', 'Ronald', 'Sarah', 'Timothy', 'Kimberly', 'Jason', 'Deborah', 'Jeffrey', 'Dorothy', 'Ryan', 'Lisa']
-      const lastNames = ['Smith', 'Johnson', 'Williams', 'Brown', 'Jones', 'Garcia', 'Miller', 'Davis', 'Rodriguez', 'Martinez', 'Hernandez', 'Lopez', 'Gonzalez', 'Wilson', 'Anderson', 'Thomas', 'Taylor', 'Moore', 'Jackson', 'Martin', 'Lee', 'Perez', 'Thompson', 'White', 'Harris', 'Sanchez', 'Clark', 'Ramirez', 'Lewis', 'Robinson', 'Walker', 'Young', 'Allen', 'King', 'Wright', 'Scott', 'Torres', 'Nguyen', 'Hill', 'Flores', 'Green', 'Adams', 'Nelson', 'Baker', 'Hall', 'Rivera', 'Campbell', 'Mitchell', 'Carter', 'Roberts']
-      const practiceAreas = ['Personal Injury', 'Corporate Law', 'Family Law', 'Criminal Defense', 'Real Estate', 'Employment Law', 'Immigration Law', 'Tax Law', 'Bankruptcy', 'Intellectual Property', 'Medical Malpractice', 'Business Law', 'Estate Planning', 'Contract Law', 'Civil Rights', 'Environmental Law', 'Securities Law', 'Insurance Law', 'Construction Law', 'Administrative Law']
-      const states = ['CA', 'NY', 'TX', 'FL', 'IL', 'PA', 'OH', 'GA', 'NC', 'MI', 'NJ', 'VA', 'WA', 'AZ', 'MA', 'TN', 'IN', 'MO', 'MD', 'WI', 'CO', 'MN', 'SC', 'AL', 'LA', 'KY', 'OR', 'OK', 'CT', 'UT', 'IA', 'NV', 'AR', 'MS', 'KS', 'NM', 'NE', 'WV', 'ID', 'HI', 'NH', 'ME', 'MT', 'RI', 'DE', 'SD', 'ND', 'AK', 'VT', 'WY']
-      const lawFirmTypes = ['Associates', 'Law Group', 'Legal Services', '& Partners', 'Legal Firm', 'Law Office', 'Attorneys', 'Legal Center', 'Law Firm', 'Legal Associates']
-
-      const data = []
-      for (let i = 0; i < 500; i++) {
-        const firstName = firstNames[Math.floor(Math.random() * firstNames.length)]
-        const lastName = lastNames[Math.floor(Math.random() * lastNames.length)]
-        const state = states[Math.floor(Math.random() * states.length)]
-        const practiceArea = practiceAreas[Math.floor(Math.random() * practiceAreas.length)]
-        const firmType = lawFirmTypes[Math.floor(Math.random() * lawFirmTypes.length)]
-        
-        data.push({
-          'Full Name': `${firstName} ${lastName}`,
-          'Email': `${firstName.toLowerCase()}.${lastName.toLowerCase()}@${lastName.toLowerCase()}law.com`,
-          'Phone': `(555) ${String(Math.floor(Math.random() * 900) + 100)}-${String(Math.floor(Math.random() * 9000) + 1000)}`,
-          'Law Firm': `${lastName} ${firmType}`,
-          'Practice Area': practiceArea,
-          'State': state,
-          'Bar Number': `${state}${String(Math.floor(Math.random() * 90000) + 10000)}`,
-          'Years of Experience': Math.floor(Math.random() * 30) + 1,
-          'Firm Size': ['Solo', '2-10', '11-50', '51-200', '200+'][Math.floor(Math.random() * 5)],
-          'Website': `www.${lastName.toLowerCase()}law.com`
-        })
-      }
-      return data
-    }
-
-    const data = generateSampleData()
-
-    // Create Excel workbook
-    const wb = XLSX.utils.book_new()
-    const ws = XLSX.utils.json_to_sheet(data)
-    
-    // Style the header row
-    const range = XLSX.utils.decode_range(ws['!ref'] || 'A1')
-    for (let col = range.s.c; col <= range.e.c; col++) {
-      const cellAddress = XLSX.utils.encode_cell({ r: 0, c: col })
-      if (!ws[cellAddress]) continue
-      ws[cellAddress].s = {
-        font: { bold: true },
-        fill: { fgColor: { rgb: "CCCCCC" } }
-      }
-    }
-
-    XLSX.utils.book_append_sheet(wb, ws, "Attorney Leads Sample")
-
-    // Generate Excel file and download
-    XLSX.writeFile(wb, 'attorney-leads-sample-500.xlsx')
+    // Download the real sample file from public folder
+    const link = document.createElement('a')
+    link.href = '/Attorney Leads Sample.xlsx'
+    link.download = 'Attorney Leads Sample.xlsx'
+    link.style.display = 'none'
+    document.body.appendChild(link)
+    link.click()
+    document.body.removeChild(link)
   }
 
   return (
@@ -186,7 +140,7 @@ export default function SampleForm() {
                        </div>
                      </div>
                      <h3 className="text-lg font-semibold text-green-800 mb-2">Sample Ready!</h3>
-                     <p className="text-green-700 mb-4 text-sm">Click below to download your free sample of 500 verified attorney contacts with 10 data fields</p>
+                     <p className="text-green-700 mb-4 text-sm">Click below to download your free sample of verified attorney contacts from our premium database</p>
                      <Button
                        onClick={handleDownload}
                        className="bg-green-600 hover:bg-green-700 text-white font-semibold px-6 py-3 rounded-xl border-0"
@@ -217,7 +171,7 @@ export default function SampleForm() {
                    <svg className="h-4 w-4 text-green-500 mr-1" fill="currentColor" viewBox="0 0 20 20">
                      <path fillRule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clipRule="evenodd" />
                    </svg>
-                   500 attorney contacts
+                   Real attorney contacts
                  </span>
                </div>
             </form>
