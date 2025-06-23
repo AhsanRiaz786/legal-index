@@ -1,4 +1,5 @@
 import { type NextRequest, NextResponse } from "next/server"
+import { appendToSheet } from "@/lib/googleSheets"
 
 export async function POST(request: NextRequest) {
   try {
@@ -8,21 +9,18 @@ export async function POST(request: NextRequest) {
       return NextResponse.json({ error: "Valid email is required" }, { status: 400 })
     }
 
-    // Log the email for lead tracking
+    // Collect lead information
     const timestamp = new Date().toISOString()
-    const leadInfo = {
-      email,
-      timestamp,
-      userAgent: request.headers.get('user-agent'),
-      ip: request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || 'unknown'
-    }
+    const userAgent = request.headers.get('user-agent') || undefined
+    const ip = request.headers.get('x-forwarded-for') || request.headers.get('x-real-ip') || undefined
     
-    // Log to console (you can later save to a file or database)
-    console.log('🎯 NEW LEAD:', JSON.stringify(leadInfo, null, 2))
+    // Log to console for immediate feedback
+    console.log('🎯 NEW LEAD:', { email, timestamp, ip })
     
-    // You could also append to a simple file for now:
-    // const fs = require('fs')
-    // fs.appendFileSync('leads.txt', `${timestamp}: ${email}\n`)
+    // Add to Google Sheet (async, won't block user experience)
+    appendToSheet(email, timestamp, userAgent, ip).catch(error => {
+      console.error('Failed to add to Google Sheet:', error)
+    })
 
     return NextResponse.json({ 
       success: true, 
