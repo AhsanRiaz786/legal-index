@@ -47,7 +47,7 @@ export default function Hero() {
               <span className="text-3xl sm:text-4xl lg:text-5xl text-slate-600 font-poppins font-medium">
                 300K+ Verified US Lawyers
               </span>
-            </h1>
+          </h1>
             
             <p className="text-xl lg:text-2xl text-slate-600 mb-12 max-w-4xl mx-auto leading-relaxed font-light">
               Get direct access to the most comprehensive lawyer contact database with verified emails, phone numbers, and practice areas. 
@@ -55,9 +55,9 @@ export default function Hero() {
             </p>
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-12">
-              <Button
-                onClick={scrollToForm}
-                size="lg"
+          <Button
+            onClick={scrollToForm}
+            size="lg"
                 className="premium-button text-white font-semibold text-lg px-8 py-4 rounded-xl border-0 group"
               >
                 Download Live Sample
@@ -67,10 +67,10 @@ export default function Hero() {
                 variant="outline"
                 size="lg"
                 className="bg-white/80 backdrop-blur-sm border-slate-200 text-slate-700 hover:bg-white font-semibold text-lg px-8 py-4 rounded-xl premium-shadow"
-              >
+          >
                 <Database className="mr-2 h-5 w-5" />
                 View Database Details
-              </Button>
+          </Button>
             </div>
 
             {/* Trust indicators */}

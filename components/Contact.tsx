@@ -41,14 +41,14 @@ export default function Contact() {
                 </div>
               </div>
               <p className="text-slate-600 mb-4 font-light">Get immediate answers to your questions and discuss your specific requirements in real-time.</p>
-              <Button
-                asChild
+          <Button
+            asChild
                 className="w-full premium-button text-white font-semibold rounded-xl border-0"
-              >
+          >
                                  <a href="https://wa.me/923040949380" target="_blank" rel="noopener noreferrer">
                   Start WhatsApp Chat
-                </a>
-              </Button>
+            </a>
+          </Button>
             </div>
 
             <div className="premium-card p-6 rounded-2xl group hover:shadow-2xl transition-all duration-300">
@@ -62,15 +62,15 @@ export default function Contact() {
                 </div>
               </div>
               <p className="text-slate-600 mb-4 font-light">Send us your detailed requirements and receive a comprehensive proposal with pricing.</p>
-              <Button
-                asChild
-                variant="outline"
+          <Button
+            asChild
+            variant="outline"
                 className="w-full bg-white/80 backdrop-blur-sm border-slate-200 text-slate-700 hover:bg-white font-semibold rounded-xl"
-              >
+          >
                                  <a href="mailto:ariaz.bscs23seecs@seecs.edu.pk">
                   Send Email
-                </a>
-              </Button>
+            </a>
+          </Button>
             </div>
           </div>
 
