@@ -25,23 +25,27 @@ export default function FAQ() {
   ]
 
   return (
-    <section className="py-20 bg-gray-50">
+    <section className="py-16 sm:py-20 bg-gray-50">
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-bold text-slate-900 mb-4">Attorney Leads Database - Frequently Asked Questions</h2>
+        <div className="text-center mb-12 sm:mb-16">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-bold text-slate-900 mb-3 sm:mb-4 px-4 sm:px-0">
+            Attorney Leads Database - Frequently Asked Questions
+          </h2>
         </div>
 
-        <Accordion type="single" collapsible className="space-y-4">
+        <Accordion type="single" collapsible className="space-y-3 sm:space-y-4">
           {faqs.map((faq, index) => (
             <AccordionItem
               key={index}
               value={`item-${index}`}
               className="bg-white border border-slate-200 rounded-lg shadow-sm"
             >
-              <AccordionTrigger className="px-6 py-4 text-left font-semibold text-slate-900 hover:no-underline">
+              <AccordionTrigger className="px-4 sm:px-6 py-3 sm:py-4 text-left font-semibold text-slate-900 hover:no-underline text-sm sm:text-base">
                 {faq.question}
               </AccordionTrigger>
-              <AccordionContent className="px-6 pb-4 text-slate-600 leading-relaxed">{faq.answer}</AccordionContent>
+              <AccordionContent className="px-4 sm:px-6 pb-3 sm:pb-4 text-slate-600 leading-relaxed text-sm sm:text-base">
+                {faq.answer}
+              </AccordionContent>
             </AccordionItem>
           ))}
         </Accordion>
