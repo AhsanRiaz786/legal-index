@@ -38,22 +38,40 @@ export const metadata: Metadata = {
   keywords: "buy attorney leads, lawyer contact database, attorney email list, US lawyer database, legal marketing leads, attorney phone numbers, lawyer leads for sale, attorney contact information by state, legal email database, attorney database for marketing",
   authors: [{ name: "The Legal Index" }],
   icons: {
-    icon: '/favicon.ico',
+    icon: [
+      { url: '/favicon.svg', type: 'image/svg+xml' },
+      { url: '/favicon.ico', sizes: '48x48', type: 'image/x-icon' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
+    ],
     shortcut: '/favicon.ico',
-    apple: '/logo.png',
+    apple: [
+      { url: '/apple-touch-icon.png', sizes: '180x180', type: 'image/png' },
+      { url: '/logo.png', sizes: '192x192', type: 'image/png' },
+    ],
   },
+  manifest: '/manifest.json',
   openGraph: {
     title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
     description:
       "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Perfect for legal marketing agencies & CRM companies.",
     type: "website",
     url: "https://attorneyleads.store",
+    siteName: "The Legal Index",
+    locale: "en_US",
     images: [
       {
         url: "https://attorneyleads.store/og-image.jpg",
         width: 1200,
         height: 630,
-        alt: "The Legal Index - Premium Attorney Database"
+        alt: "The Legal Index - Premium Attorney Database with 300K+ Verified Lawyers",
+        type: "image/jpeg"
+      },
+      {
+        url: "https://attorneyleads.store/logo.png",
+        width: 192,
+        height: 192,
+        alt: "The Legal Index Logo",
+        type: "image/png"
       }
     ]
   },
@@ -78,6 +96,10 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="canonical" href="https://attorneyleads.store" />
+        <meta name="format-detection" content="telephone=no" />
+        <meta name="msapplication-TileColor" content="#1e40af" />
+        <meta name="msapplication-config" content="/browserconfig.xml" />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{

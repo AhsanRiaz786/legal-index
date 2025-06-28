@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Logo Generator for Legal Index</title>
+    <style>
+        body { margin: 0; font-family: Arial, sans-serif; }
+        .logo-container { 
+            width: 1200px; 
+            height: 630px; 
+            background: linear-gradient(135deg, #1e40af, #3b82f6, #6366f1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+        }
+        .logo-content {
+            padding: 40px;
+        }
+        .main-title {
+            font-size: 72px;
+            font-weight: bold;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 36px;
+            margin-bottom: 30px;
+            opacity: 0.9;
+        }
+        .stats {
+            font-size: 28px;
+            background: rgba(255,255,255,0.2);
+            padding: 20px 40px;
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+        }
+        .instructions {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: rgba(255,255,255,0.9);
+            padding: 15px;
+            border-radius: 10px;
+            color: black;
+            max-width: 400px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instructions">
+        <h3>Instructions:</h3>
+        <p>1. Right-click on the logo below</p>
+        <p>2. Select "Save image as..."</p>
+        <p>3. Save as "og-image.jpg" and replace the existing file in /public/</p>
+        <p>4. Delete this HTML file after use</p>
+    </div>
+    
+    <div class="logo-container" id="logo">
+        <div class="logo-content">
+            <div class="main-title">THE LEGAL INDEX</div>
+            <div class="subtitle">Premium Attorney Database</div>
+            <div class="stats">300K+ Verified US Lawyers</div>
+        </div>
+    </div>
+
+    <script>
+        // Auto-capture as image
+        setTimeout(() => {
+            const canvas = document.createElement('canvas');
+            const ctx = canvas.getContext('2d');
+            canvas.width = 1200;
+            canvas.height = 630;
+            
+            // Create gradient
+            const gradient = ctx.createLinearGradient(0, 0, 1200, 630);
+            gradient.addColorStop(0, '#1e40af');
+            gradient.addColorStop(0.5, '#3b82f6');
+            gradient.addColorStop(1, '#6366f1');
+            
+            ctx.fillStyle = gradient;
+            ctx.fillRect(0, 0, 1200, 630);
+            
+            // Add text
+            ctx.fillStyle = 'white';
+            ctx.textAlign = 'center';
+            ctx.shadowColor = 'rgba(0,0,0,0.3)';
+            ctx.shadowBlur = 4;
+            ctx.shadowOffsetX = 2;
+            ctx.shadowOffsetY = 2;
+            
+            ctx.font = 'bold 72px Arial';
+            ctx.fillText('THE LEGAL INDEX', 600, 280);
+            
+            ctx.font = '36px Arial';
+            ctx.fillText('Premium Attorney Database', 600, 340);
+            
+            // Background for stats
+            ctx.shadowColor = 'transparent';
+            ctx.fillStyle = 'rgba(255,255,255,0.2)';
+            ctx.roundRect(400, 380, 400, 80, 15);
+            ctx.fill();
+            
+            ctx.fillStyle = 'white';
+            ctx.font = '28px Arial';
+            ctx.fillText('300K+ Verified US Lawyers', 600, 430);
+            
+            // Download
+            const link = document.createElement('a');
+            link.download = 'og-image.jpg';
+            link.href = canvas.toDataURL('image/jpeg', 0.9);
+            link.click();
+        }, 1000);
+    </script>
+</body>
+</html> 
