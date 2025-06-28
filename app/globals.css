@@ -209,4 +209,23 @@
     word-wrap: break-word;
     hyphens: auto;
   }
+  
+  /* Mobile viewport fixes */
+  @supports (-webkit-touch-callout: none) {
+    body {
+      -webkit-text-size-adjust: 100%;
+    }
+  }
+  
+  /* Improve mobile tap targets */
+  a, button, [role="button"] {
+    -webkit-tap-highlight-color: rgba(59, 130, 246, 0.1);
+  }
+  
+  /* Prevent zoom on inputs on iOS */
+  @media screen and (-webkit-min-device-pixel-ratio: 0) {
+    input, select, textarea {
+      font-size: 16px;
+    }
+  }
 }
