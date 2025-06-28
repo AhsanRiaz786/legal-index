@@ -1,7 +1,16 @@
+"use client"
+
 import { Button } from "@/components/ui/button"
 import { Shield, CheckCircle } from "lucide-react"
 
 export default function Header() {
+  const scrollToContact = () => {
+    const contactElement = document.getElementById("contact")
+    if (contactElement) {
+      contactElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <header className="glass-effect sticky top-0 z-50 border-b border-white/20">
       <div className="max-w-7xl mx-auto px-3 sm:px-4 lg:px-6 xl:px-8">
@@ -31,7 +40,10 @@ export default function Header() {
               <CheckCircle className="h-3 w-3 text-blue-600 flex-shrink-0" />
               <span className="font-medium">300K+</span>
             </div>
-            <Button className="premium-button text-white font-semibold px-2.5 sm:px-3 lg:px-6 py-1.5 sm:py-2 lg:py-2.5 rounded-lg border-0 text-xs sm:text-sm">
+            <Button 
+              onClick={scrollToContact}
+              className="premium-button text-white font-semibold px-2.5 sm:px-3 lg:px-6 py-1.5 sm:py-2 lg:py-2.5 rounded-lg border-0 text-xs sm:text-sm"
+            >
               <span className="hidden lg:inline">Get Full Access</span>
               <span className="hidden sm:inline lg:hidden">Get Access</span>
               <span className="sm:hidden">Access</span>
