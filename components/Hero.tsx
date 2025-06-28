@@ -11,6 +11,13 @@ export default function Hero() {
     }
   }
 
+  const scrollToFeatures = () => {
+    const featuresElement = document.getElementById("features")
+    if (featuresElement) {
+      featuresElement.scrollIntoView({ behavior: "smooth" })
+    }
+  }
+
   return (
     <section className="relative overflow-hidden py-12 sm:py-16 lg:py-24 xl:py-32">
       {/* Premium background with subtle pattern */}
@@ -64,6 +71,7 @@ export default function Hero() {
                 <ArrowRight className="ml-2 h-4 w-4 sm:h-4 sm:w-4 lg:h-5 lg:w-5 group-hover:translate-x-1 transition-transform" />
               </Button>
               <Button
+                onClick={scrollToFeatures}
                 variant="outline"
                 size="lg"
                 className="w-full sm:w-auto bg-white/80 backdrop-blur-sm border-slate-200 text-slate-700 hover:bg-white font-semibold text-sm sm:text-base lg:text-lg px-5 sm:px-6 lg:px-8 py-2.5 sm:py-3 lg:py-4 rounded-xl premium-shadow"

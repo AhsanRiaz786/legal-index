@@ -33,7 +33,7 @@ export default function Features() {
   ]
 
   return (
-    <section className="py-12 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden">
+    <section id="features" className="py-12 sm:py-16 lg:py-20 xl:py-24 relative overflow-hidden">
       {/* Premium background */}
       <div className="absolute inset-0 bg-gradient-to-b from-white via-slate-50 to-indigo-50"></div>
       <div className="absolute top-0 left-1/4 w-48 h-48 sm:w-72 sm:h-72 lg:w-96 lg:h-96 bg-blue-400/20 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-float"></div>
