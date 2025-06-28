@@ -37,6 +37,11 @@ export const metadata: Metadata = {
     "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Email lists, phone numbers, practice areas by state. Perfect for legal marketing agencies, CRM companies & legal tech startups. Download free sample.",
   keywords: "buy attorney leads, lawyer contact database, attorney email list, US lawyer database, legal marketing leads, attorney phone numbers, lawyer leads for sale, attorney contact information by state, legal email database, attorney database for marketing",
   authors: [{ name: "The Legal Index" }],
+  icons: {
+    icon: '/favicon.ico',
+    shortcut: '/favicon.ico',
+    apple: '/logo.png',
+  },
   openGraph: {
     title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
     description:
