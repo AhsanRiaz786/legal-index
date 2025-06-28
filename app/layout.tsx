@@ -43,12 +43,21 @@ export const metadata: Metadata = {
       "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Perfect for legal marketing agencies & CRM companies.",
     type: "website",
     url: "https://attorneyleads.store",
+    images: [
+      {
+        url: "https://attorneyleads.store/og-image.jpg",
+        width: 1200,
+        height: 630,
+        alt: "The Legal Index - Premium Attorney Database"
+      }
+    ]
   },
   twitter: {
     card: "summary_large_image",
     title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
     description:
       "Buy premium attorney leads database with 300K+ verified US lawyer contacts. Perfect for legal marketing agencies & CRM companies.",
+    images: ["https://attorneyleads.store/og-image.jpg"]
   },
   robots: {
     index: true,
@@ -72,9 +81,13 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Product",
-                  "@id": "#product",
+                  "@id": "https://attorneyleads.store/#product",
                   name: "The Legal Index Attorney Database",
                   description: "Premium database of over 300,000 verified U.S. attorneys with advanced filtering by practice areas. Professional data intelligence for marketing agencies, CRM companies, and legal tech startups.",
+                  image: [
+                    "https://attorneyleads.store/product-image.jpg",
+                    "https://attorneyleads.store/attorney-database-screenshot.jpg"
+                  ],
                   brand: {
                     "@type": "Brand",
                     name: "The Legal Index"
@@ -83,10 +96,45 @@ export default function RootLayout({
                   offers: {
                     "@type": "Offer",
                     availability: "https://schema.org/InStock",
+                    price: "299.00",
                     priceCurrency: "USD",
+                    priceValidUntil: "2025-12-31",
+                    url: "https://attorneyleads.store",
                     seller: {
                       "@type": "Organization",
-                      name: "The Legal Index"
+                      name: "The Legal Index",
+                      url: "https://attorneyleads.store"
+                    },
+                    shippingDetails: {
+                      "@type": "OfferShippingDetails",
+                      shippingRate: {
+                        "@type": "MonetaryAmount",
+                        value: "0",
+                        currency: "USD"
+                      },
+                      deliveryTime: {
+                        "@type": "ShippingDeliveryTime",
+                        handlingTime: {
+                          "@type": "QuantitativeValue",
+                          minValue: "0",
+                          maxValue: "1",
+                          unitCode: "DAY"
+                        },
+                        transitTime: {
+                          "@type": "QuantitativeValue",
+                          minValue: "0",
+                          maxValue: "0",
+                          unitCode: "DAY"
+                        }
+                      }
+                    },
+                    hasMerchantReturnPolicy: {
+                      "@type": "MerchantReturnPolicy",
+                      applicableCountry: "US",
+                      returnPolicyCategory: "https://schema.org/MerchantReturnFiniteReturnWindow",
+                      merchantReturnDays: 30,
+                      returnMethod: "https://schema.org/ReturnByMail",
+                      returnFees: "https://schema.org/FreeReturn"
                     }
                   },
                   aggregateRating: {
@@ -96,16 +144,14 @@ export default function RootLayout({
                     bestRating: "5",
                     worstRating: "1"
                   },
-                  audience: {
-                    "@type": "BusinessAudience",
-                    audienceType: "Marketing Agencies, CRM Companies, Legal Tech Startups"
-                  }
+                  audience: "Marketing Agencies, CRM Companies, Legal Tech Startups"
                 },
                 {
                   "@type": "Organization",
-                  "@id": "#organization",
+                  "@id": "https://attorneyleads.store/#organization",
                   name: "The Legal Index",
                   url: "https://attorneyleads.store",
+                  logo: "https://attorneyleads.store/logo.png",
                   description: "Premium attorney database provider specializing in verified lawyer contact information for marketing agencies and legal tech companies.",
                   contactPoint: {
                     "@type": "ContactPoint",
@@ -125,7 +171,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "FAQPage",
-                  "@id": "#faq",
+                  "@id": "https://attorneyleads.store/#faq",
                   mainEntity: [
                     {
                       "@type": "Question",
@@ -163,7 +209,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Dataset",
-                  "@id": "#dataset",
+                  "@id": "https://attorneyleads.store/#dataset",
                   name: "US Attorney Contact Database",
                   description: "Comprehensive database of over 300,000 verified U.S. attorney contacts with practice area classifications",
                   keywords: "attorney leads, lawyer database, legal marketing, attorney contact information",
@@ -181,6 +227,24 @@ export default function RootLayout({
                     name: "United States"
                   },
                   temporalCoverage: "2024"
+                },
+                {
+                  "@type": "WebSite",
+                  "@id": "https://attorneyleads.store/#website",
+                  url: "https://attorneyleads.store",
+                  name: "The Legal Index - Attorney Database",
+                  description: "Buy premium attorney leads database with 300K+ verified US lawyer contacts.",
+                  publisher: {
+                    "@id": "https://attorneyleads.store/#organization"
+                  },
+                  potentialAction: {
+                    "@type": "SearchAction",
+                    target: {
+                      "@type": "EntryPoint",
+                      urlTemplate: "https://attorneyleads.store/?q={search_term_string}"
+                    },
+                    "query-input": "required name=search_term_string"
+                  }
                 }
               ]
             })
