@@ -100,6 +100,13 @@ export default function RootLayout({
                     priceCurrency: "USD",
                     priceValidUntil: "2025-12-31",
                     url: "https://attorneyleads.store",
+                    priceSpecification: {
+                      "@type": "PriceSpecification",
+                      price: "299.00",
+                      priceCurrency: "USD",
+                      validFrom: "2024-01-01",
+                      validThrough: "2025-12-31"
+                    },
                     seller: {
                       "@type": "Organization",
                       name: "The Legal Index",
@@ -144,7 +151,10 @@ export default function RootLayout({
                     bestRating: "5",
                     worstRating: "1"
                   },
-                  audience: "Marketing Agencies, CRM Companies, Legal Tech Startups"
+                  audience: {
+                    "@type": "BusinessAudience",
+                    audienceType: "Marketing Agencies, CRM Companies, Legal Tech Startups"
+                  }
                 },
                 {
                   "@type": "Organization",
