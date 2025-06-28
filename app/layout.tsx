@@ -223,6 +223,7 @@ export default function RootLayout({
                   name: "US Attorney Contact Database",
                   description: "Comprehensive database of over 300,000 verified U.S. attorney contacts with practice area classifications",
                   keywords: "attorney leads, lawyer database, legal marketing, attorney contact information",
+                  license: "https://creativecommons.org/licenses/by/4.0/",
                   creator: {
                     "@type": "Organization",
                     name: "The Legal Index"
@@ -230,7 +231,8 @@ export default function RootLayout({
                   distribution: {
                     "@type": "DataDownload",
                     encodingFormat: "XLSX",
-                    contentSize: "300000+ records"
+                    contentSize: "300000+ records",
+                    contentUrl: "https://attorneyleads.store/Attorney%20Leads%20Sample.xlsx"
                   },
                   spatialCoverage: {
                     "@type": "Place",
