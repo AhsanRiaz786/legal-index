@@ -1,5 +1,5 @@
 import type React from "react"
-import type { Metadata } from "next"
+import type { Metadata, Viewport } from "next"
 import { Inter, Playfair_Display, Poppins } from "next/font/google"
 import { Analytics } from "@vercel/analytics/react"
 import "./globals.css"
@@ -22,6 +22,14 @@ const poppins = Poppins({
   variable: "--font-poppins",
   display: "swap"
 })
+
+export const viewport: Viewport = {
+  width: 'device-width',
+  initialScale: 1,
+  maximumScale: 1,
+  userScalable: false,
+  themeColor: '#1e40af',
+}
 
 export const metadata: Metadata = {
   title: "Buy Attorney Leads | US Lawyer Contact Database | 300K+ Verified Attorneys",
@@ -54,7 +62,7 @@ export default function RootLayout({
   children: React.ReactNode
 }) {
   return (
-    <html lang="en">
+    <html lang="en" className="scroll-smooth">
       <head>
         <script
           type="application/ld+json"
@@ -179,8 +187,10 @@ export default function RootLayout({
           }}
         />
       </head>
-      <body className={`${inter.variable} ${playfair.variable} ${poppins.variable} font-poppins bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 antialiased`}>
-        {children}
+      <body className={`${inter.variable} ${playfair.variable} ${poppins.variable} font-poppins bg-gradient-to-br from-slate-50 via-blue-50 to-indigo-50 text-slate-900 antialiased overflow-x-hidden`}>
+        <div className="min-h-screen w-full">
+          {children}
+        </div>
         <Analytics />
       </body>
     </html>
