@@ -106,18 +106,7 @@ export default function BlogPage() {
               Discover proven strategies for attorney database marketing, lawyer lead generation, and law firm growth. Get expert insights on maximizing ROI with targeted legal marketing campaigns.
             </p>
 
-            <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
-              <Button
-                asChild
-                size="lg"
-                className="premium-button text-white font-semibold px-8 py-4 rounded-xl border-0 group"
-              >
-                <a href="/api/subscribe">
-                  Subscribe to Updates
-                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
-                </a>
-              </Button>
-            </div>
+
           </div>
         </div>
       </section>
@@ -233,16 +222,16 @@ export default function BlogPage() {
               </div>
 
               <div className="premium-card p-6 rounded-xl">
-                <h3 className="text-lg font-semibold text-slate-900 mb-4">Subscribe to Our Newsletter</h3>
+                <h3 className="text-lg font-semibold text-slate-900 mb-4">Get Attorney Database</h3>
                 <p className="text-slate-600 text-sm mb-4">
-                  Get weekly insights on legal marketing strategies and attorney lead generation.
+                  Access our comprehensive attorney database with 300K+ verified lawyer contacts for your marketing campaigns.
                 </p>
                 <Button 
                   asChild 
                   className="w-full premium-button text-white font-semibold"
                 >
-                  <a href="/api/subscribe">
-                    Subscribe Now
+                  <a href="/attorney-database">
+                    Browse Database
                   </a>
                 </Button>
               </div>

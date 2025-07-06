@@ -1,6 +1,7 @@
 import type { Metadata } from "next"
 import { Button } from "@/components/ui/button"
 import { Database, Shield, Download, Target, Star, CheckCircle, ArrowRight, Users, MapPin, Phone, Mail } from "lucide-react"
+import Link from "next/link"
 
 export const metadata: Metadata = {
   title: "Attorney Database | 300K+ Verified US Lawyer Contacts | Email Lists & Phone Numbers",
@@ -18,12 +19,6 @@ export const metadata: Metadata = {
 }
 
 export default function AttorneyDatabasePage() {
-  const scrollToContact = () => {
-    const contactElement = document.getElementById("contact-form")
-    if (contactElement) {
-      contactElement.scrollIntoView({ behavior: "smooth" })
-    }
-  }
 
   const features = [
     {
@@ -97,20 +92,25 @@ export default function AttorneyDatabasePage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
-                onClick={scrollToContact}
+                asChild
                 size="lg"
                 className="premium-button text-white font-semibold px-8 py-4 rounded-xl border-0 group"
               >
-                Get Attorney Database Access
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href="#contact-form">
+                  Get Attorney Database Access
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
               <Button
+                asChild
                 variant="outline"
                 size="lg"
                 className="bg-white/80 backdrop-blur-sm border-slate-200 text-slate-700 hover:bg-white font-semibold px-8 py-4 rounded-xl"
               >
-                <Download className="mr-2 h-5 w-5" />
-                Download Free Sample
+                <a href="/#sample-form">
+                  <Download className="mr-2 h-5 w-5" />
+                  Download Free Sample
+                </a>
               </Button>
             </div>
           </div>
