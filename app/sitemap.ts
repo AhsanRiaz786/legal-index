@@ -17,6 +17,15 @@ export default function sitemap(): MetadataRoute.Sitemap {
     'illinois', 'ohio', 'georgia', 'north-carolina', 'michigan'
   ]
 
+  // Blog posts for SEO coverage
+  const blogPosts = [
+    'how-to-choose-best-attorney-database-legal-marketing',
+    'state-by-state-guide-attorney-lead-generation', 
+    'roi-analysis-email-marketing-vs-cold-calling-lawyers',
+    'gdpr-compliance-attorney-email-marketing',
+    'practice-area-targeting-maximizing-legal-lead-conversion'
+  ]
+
   const staticPages = [
     {
       url: baseUrl,
@@ -44,6 +53,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
     {
       url: `${baseUrl}/attorney-email-list`,
+      lastModified: currentDate,
+      changeFrequency: "weekly" as const,
+      priority: 0.8,
+    },
+    {
+      url: `${baseUrl}/blog`,
       lastModified: currentDate,
       changeFrequency: "weekly" as const,
       priority: 0.8,
@@ -98,6 +113,14 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ]
 
+  // Blog post pages
+  const blogPostPages = blogPosts.map(post => ({
+    url: `${baseUrl}/blog/${post}`,
+    lastModified: currentDate,
+    changeFrequency: "monthly" as const,
+    priority: 0.7,
+  }))
+
   // Practice area pages
   const practiceAreaPages = practiceAreas.map(area => ({
     url: `${baseUrl}/practice-areas/${area}`,
@@ -124,5 +147,5 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }))
   )
 
-  return [...staticPages, ...practiceAreaPages, ...statePages, ...combinedPages]
+  return [...staticPages, ...blogPostPages, ...practiceAreaPages, ...statePages, ...combinedPages]
 }
