@@ -1,19 +1,27 @@
 User-agent: *
 Allow: /
 
-# Sitemap
+# Priority crawling for important content
+Allow: /attorney-database
+Allow: /lawyer-leads
+Allow: /practice-areas
+Allow: /states
+Allow: /legal-marketing
+
+# Sitemap locations
 Sitemap: https://attorneyleads.store/sitemap.xml
 
 # Crawl-delay for respectful crawling
 Crawl-delay: 1
 
-# Block access to sensitive areas (if any)
+# Block access to sensitive areas
 Disallow: /api/
 Disallow: /_next/
 Disallow: /admin/
 Disallow: /.git/
+Disallow: /node_modules/
 
-# Allow important SEO files
+# Allow important SEO files and assets
 Allow: /sitemap.xml
 Allow: /robots.txt
 Allow: /*.css
@@ -25,4 +33,15 @@ Allow: /*.gif
 Allow: /*.svg
 Allow: /*.ico
 Allow: /*.pdf
-Allow: /*.xlsx 
+Allow: /*.xlsx
+Allow: /Attorney*Leads*Sample.xlsx
+
+# Enhanced crawl priority for high-value pages
+User-agent: Googlebot
+Allow: /
+Crawl-delay: 0
+
+# Bing specific optimizations
+User-agent: bingbot
+Allow: /
+Crawl-delay: 1 
