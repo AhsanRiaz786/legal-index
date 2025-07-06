@@ -1,7 +1,7 @@
 import type { Metadata } from "next"
 import Link from "next/link"
 import { Button } from "@/components/ui/button"
-import { Calendar, User, ArrowRight, CheckCircle, Star, Target, Database, TrendingUp, DollarSign, AlertTriangle, Shield } from "lucide-react"
+import { Calendar, User, ArrowRight, CheckCircle, Star, Target, Database, TrendingUp, DollarSign, AlertTriangle, Shield, Users } from "lucide-react"
 
 export const metadata: Metadata = {
   title: "How to Choose the Best Attorney Database for Legal Marketing | Complete 2024 Guide",

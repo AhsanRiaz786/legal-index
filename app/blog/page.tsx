@@ -108,11 +108,14 @@ export default function BlogPage() {
 
             <div className="flex flex-col sm:flex-row gap-4 justify-center mb-12">
               <Button
+                asChild
                 size="lg"
                 className="premium-button text-white font-semibold px-8 py-4 rounded-xl border-0 group"
               >
-                Subscribe to Updates
-                <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                <a href="/api/subscribe">
+                  Subscribe to Updates
+                  <ArrowRight className="ml-2 h-5 w-5 group-hover:translate-x-1 transition-transform" />
+                </a>
               </Button>
             </div>
           </div>
@@ -234,8 +237,13 @@ export default function BlogPage() {
                 <p className="text-slate-600 text-sm mb-4">
                   Get weekly insights on legal marketing strategies and attorney lead generation.
                 </p>
-                <Button className="w-full premium-button text-white font-semibold">
-                  Subscribe Now
+                <Button 
+                  asChild 
+                  className="w-full premium-button text-white font-semibold"
+                >
+                  <a href="/api/subscribe">
+                    Subscribe Now
+                  </a>
                 </Button>
               </div>
             </div>
