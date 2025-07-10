@@ -97,7 +97,6 @@ export default function RootLayout({
   return (
     <html lang="en" className="scroll-smooth">
       <head>
-        <link rel="canonical" href="https://attorneyleads.store" />
         <meta name="format-detection" content="telephone=no" />
         <meta name="msapplication-TileColor" content="#1e40af" />
         <meta name="msapplication-config" content="/browserconfig.xml" />
@@ -109,7 +108,7 @@ export default function RootLayout({
               "@graph": [
                 {
                   "@type": "Product",
-                  "@id": "https://attorneyleads.store/#product",
+                  "@id": "https://attorneyleads.store/attorney-database",
                   name: "The Legal Index Attorney Database",
                   description: "Premium database of over 300,000 verified U.S. attorneys with advanced filtering by practice areas. Professional data intelligence for marketing agencies, CRM companies, and legal tech startups.",
                   image: [
@@ -186,7 +185,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Organization",
-                  "@id": "https://attorneyleads.store/#organization",
+                  "@id": "https://attorneyleads.store",
                   name: "The Legal Index",
                   url: "https://attorneyleads.store",
                   logo: "https://attorneyleads.store/logo.png",
@@ -209,7 +208,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "FAQPage",
-                  "@id": "https://attorneyleads.store/#faq",
+                  "@id": "https://attorneyleads.store/faq",
                   mainEntity: [
                     {
                       "@type": "Question",
@@ -247,7 +246,7 @@ export default function RootLayout({
                 },
                 {
                   "@type": "Dataset",
-                  "@id": "https://attorneyleads.store/#dataset",
+                  "@id": "https://attorneyleads.store/attorney-database",
                   name: "US Attorney Contact Database",
                   description: "Comprehensive database of over 300,000 verified U.S. attorney contacts with practice area classifications",
                   keywords: "attorney leads, lawyer database, legal marketing, attorney contact information",
@@ -270,12 +269,12 @@ export default function RootLayout({
                 },
                 {
                   "@type": "WebSite",
-                  "@id": "https://attorneyleads.store/#website",
+                  "@id": "https://attorneyleads.store",
                   url: "https://attorneyleads.store",
                   name: "The Legal Index - Attorney Database",
                   description: "Buy premium attorney leads database with 300K+ verified US lawyer contacts.",
                   publisher: {
-                    "@id": "https://attorneyleads.store/#organization"
+                    "@id": "https://attorneyleads.store"
                   },
 
                 }
