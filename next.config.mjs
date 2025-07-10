@@ -107,19 +107,7 @@ const nextConfig = {
     ]
   },
 
-  // Enhanced rewrites for SEO-friendly URLs
-  async rewrites() {
-    return [
-      {
-        source: '/attorney-email-database',
-        destination: '/attorney-database?type=email',
-      },
-      {
-        source: '/lawyer-phone-numbers',
-        destination: '/lawyer-leads?type=phone',
-      },
-    ]
-  },
+
 
   // Compression and performance
   compress: true,

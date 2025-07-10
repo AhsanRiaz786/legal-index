@@ -5,8 +5,7 @@ Allow: /
 Allow: /attorney-database
 Allow: /lawyer-leads
 Allow: /practice-areas
-Allow: /states
-Allow: /legal-marketing
+Allow: /blog
 
 # Sitemap locations
 Sitemap: https://attorneyleads.store/sitemap.xml
