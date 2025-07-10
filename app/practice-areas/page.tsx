@@ -49,46 +49,16 @@ export default function PracticeAreasPage() {
       specialties: ["Divorce & Separation", "Child Custody", "Property Division", "Adoption"],
       avgCaseValue: "$12K",
       href: "/practice-areas/family-law"
-    },
-    {
-      icon: Shield,
-      title: "Criminal Defense Lawyers",
-      slug: "criminal-defense",
-      count: "18,000+",
-      description: "Criminal defense, DUI, white collar crime, and federal defense specialists",
-      specialties: ["DUI Defense", "White Collar Crime", "Federal Defense", "Drug Crimes"],
-      avgCaseValue: "$25K",
-      href: "/practice-areas/criminal-defense"
-    },
-    {
-      icon: Home,
-      title: "Real Estate Attorneys",
-      slug: "real-estate",
-      count: "22,000+",
-      description: "Commercial real estate, residential, zoning, and property law specialists",
-      specialties: ["Commercial Real Estate", "Residential", "Zoning", "Property Disputes"],
-      avgCaseValue: "$35K",
-      href: "/practice-areas/real-estate"
-    },
-    {
-      icon: Users,
-      title: "Immigration Lawyers",
-      slug: "immigration",
-      count: "15,000+",
-      description: "Visa applications, citizenship, deportation defense, and employment immigration",
-      specialties: ["Visa Applications", "Citizenship", "Deportation Defense", "Employment Immigration"],
-      avgCaseValue: "$8K",
-      href: "/practice-areas/immigration"
     }
   ]
 
   const popularSearches = [
     "Personal injury lawyer database California",
-    "Corporate attorney contacts New York",
+    "Corporate attorney contacts New York", 
     "Family law attorney email list Texas",
-    "Criminal defense lawyer database Florida",
-    "Real estate attorney contacts by state",
-    "Immigration lawyer database nationwide"
+    "Personal injury lawyer database Florida",
+    "Corporate attorney contacts by state",
+    "Family law lawyer database nationwide"
   ]
 
   const benefits = [
