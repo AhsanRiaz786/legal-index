@@ -71,9 +71,10 @@ const nextConfig = {
     ]
   },
 
-  // Redirects for SEO
+  // Redirects for SEO and fixing 404s
   async redirects() {
     return [
+      // Original redirects
       {
         source: '/attorneys',
         destination: '/attorney-database',
@@ -102,6 +103,56 @@ const nextConfig = {
       {
         source: '/lawyer-database',
         destination: '/attorney-database',
+        permanent: true,
+      },
+      // Fix 404 practice area pages
+      {
+        source: '/practice-areas/real-estate',
+        destination: '/practice-areas/corporate-law',
+        permanent: true,
+      },
+      {
+        source: '/practice-areas/bankruptcy',
+        destination: '/practice-areas/corporate-law',
+        permanent: true,
+      },
+      {
+        source: '/practice-areas/criminal-defense',
+        destination: '/practice-areas/personal-injury',
+        permanent: true,
+      },
+      {
+        source: '/practice-areas/immigration',
+        destination: '/practice-areas/family-law',
+        permanent: true,
+      },
+      // Fix state pages that don't exist
+      {
+        source: '/states/:state*',
+        destination: '/practice-areas',
+        permanent: true,
+      },
+      // Fix other 404 URLs
+      {
+        source: '/legal-marketing-database',
+        destination: '/attorney-database',
+        permanent: true,
+      },
+      {
+        source: '/attorney-email-list',
+        destination: '/attorney-database',
+        permanent: true,
+      },
+      // WWW to non-WWW redirect
+      {
+        source: '/:path*',
+        has: [
+          {
+            type: 'host',
+            value: 'www.attorneyleads.store',
+          },
+        ],
+        destination: 'https://attorneyleads.store/:path*',
         permanent: true,
       },
     ]

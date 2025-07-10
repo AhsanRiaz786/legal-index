@@ -277,14 +277,7 @@ export default function RootLayout({
                   publisher: {
                     "@id": "https://attorneyleads.store/#organization"
                   },
-                  potentialAction: {
-                    "@type": "SearchAction",
-                    target: {
-                      "@type": "EntryPoint",
-                      urlTemplate: "https://attorneyleads.store/?q={search_term_string}"
-                    },
-                    "query-input": "required name=search_term_string"
-                  }
+
                 }
               ]
             })
