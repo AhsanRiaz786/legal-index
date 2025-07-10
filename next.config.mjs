@@ -143,18 +143,6 @@ const nextConfig = {
         destination: '/attorney-database',
         permanent: true,
       },
-      // WWW to non-WWW redirect
-      {
-        source: '/:path*',
-        has: [
-          {
-            type: 'host',
-            value: 'www.attorneyleads.store',
-          },
-        ],
-        destination: 'https://attorneyleads.store/:path*',
-        permanent: true,
-      },
     ]
   },
 
